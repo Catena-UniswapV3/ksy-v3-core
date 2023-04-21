@@ -18,12 +18,12 @@ contract UniswapV3Factory is IUniswapV3Factory, UniswapV3PoolDeployer, NoDelegat
     address public override owner;
 
     /**
-     * [+] ?
+     * [+] mapping of fee to tick spaceing
      */
     /// @inheritdoc IUniswapV3Factory
     mapping(uint24 => int24) public override feeAmountTickSpacing;
     /**
-     * [+] ?
+     * [+] mapping of (token0, token1, fee) to pool
      */
     /// @inheritdoc IUniswapV3Factory
     mapping(address => mapping(address => mapping(uint24 => address))) public override getPool;
